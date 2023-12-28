@@ -33,7 +33,7 @@ public class KeywordManager
                 int groupID = Integer.parseInt(parts[2]);
 
                 if (typeID == 0) blockedKeywords.put(keyword, groupID);
-                if (typeID == 1) replacementKeywordGroups.put(groupID, (ArrayList<String>) Collections.singletonList(keyword));
+                if (typeID == 1) replacementKeywordGroups.getOrDefault(groupID, (ArrayList<String>) Collections.singletonList(keyword)).add(keyword);
             }
         } catch (Exception e) {
             System.out.println("[YACF] Failed to read keyword file: " + e.getMessage());

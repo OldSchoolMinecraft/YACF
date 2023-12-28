@@ -1,5 +1,6 @@
 package net.oldschoolminecraft.yacf;
 
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
@@ -17,6 +18,7 @@ public class YACF extends JavaPlugin
         if (!keywordFile.exists()) extractResource("/wordlist.txt", keywordFile);
         keywordManager = new KeywordManager(keywordFile);
         keywordManager.reload();
+        getServer().getPluginManager().registerSuperEvents(new PlayerHandler(this), this);
         System.out.println("YACF enabled");
     }
 
