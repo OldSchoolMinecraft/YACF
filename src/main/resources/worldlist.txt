@@ -1,0 +1,11 @@
+# FORMAT: typeID:keyword:groupID
+#
+# in this example, we use typeID 0 for blocked words, and 1 for replacement words.
+# the group ID allows you to pick certain groups of replacement words for each banned word
+0:ass:0
+0:nigger:0
+0:asshole:0
+
+1:person:0
+1:nice man:0
+1:gentlemen:0
